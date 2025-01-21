@@ -1,0 +1,29 @@
+{
+    "name": "TotalSegmentator",
+    "description": "Segmentation of TotalSegmentator classes",
+    "reference": "https://zenodo.org/record/6802614",
+    "licence": "Apache 2.0",
+    "release": "2.0",
+    "channel_names": {
+        "0": "CT"
+    },
+    "labels": {
+        "background": 0,
+        "Spleen": 1,
+        "Kidney-Right": 2,
+        "Kidney-Left": 3,
+        "Gall-Bladder": 4,
+        "Liver": 5,
+        "Stomach": 6,
+        "Pancreas": 7,
+        "Esophagus": 8,
+        "Small-Intestine": 9,
+        "Duodenum": 10,
+        "Bladder": 11,
+        "Prostate": 12,
+        "Spinal-Canal": 13
+    },
+    "numTraining": 1139,
+    "file_ending": ".nii.gz",
+    "overwrite_image_reader_writer": "NibabelIOWithReorient"
+}
