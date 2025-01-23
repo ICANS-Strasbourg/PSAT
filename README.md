@@ -6,10 +6,10 @@
 
 | **Component**   | **Symbol**   | **Options and Description**                                                                                   |
 |------------------|--------------|----------------------------------------------------------------------------------------------------------------|
-| **Plan**         | \( P \)      | - **p**: Pediatric Plans  <br> - **a**: Adult Plans  <br> - **m**: Mixed Plans                                |
-| **Set**          | \( S \)      | - **p**: Pediatric Dataset  <br> - **a**: Adult Dataset  <br> - **m**: Mixed Dataset                         |
-| **Augmentation** | \( A \)      | - **d**: Default Augmentations  <br> - **c**: Contraction Augmentations                                      |
-| **Tuning**     | \( T \)      | - **p**: Pediatric Fine-Tuning  <br> - **m**: Mixed Fine-Tuning  <br> - **None**: No Fine-Tuning |
+| **Plan**         | $P$      | - **p**: Pediatric Plans  <br> - **a**: Adult Plans  <br> - **m**: Mixed Plans                                |
+| **Set**          | $S$      | - **p**: Pediatric Dataset  <br> - **a**: Adult Dataset  <br> - **m**: Mixed Dataset                         |
+| **Augmentation** | $A$      | - **d**: Default Augmentations  <br> - **c**: Contraction Augmentations                                      |
+| **Tuning**     | $T$      | - **p**: Pediatric Fine-Tuning  <br> - **m**: Mixed Fine-Tuning  <br> - **None**: No Fine-Tuning |
 
 ---
 
