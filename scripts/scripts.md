@@ -3,7 +3,8 @@
 This document outlines the utility scripts available in the repository. 
 
 - `compute_metrics.py`  
-  Evaluates segmentation results by computing Dice score, Hausdorff distance, and surface distances.
+  Evaluates segmentation results by computing Dice score, Hausdorff distance, and surface distances.\
+  Outputs `patient_wise_metrics.csv` and aggredated `evaluation_results.csv`.
 
 - `convert_TCIA_to_nnunet.py`  
   Converts the TCIA pediatric dataset into the nnU-Net compliant format.
@@ -16,6 +17,10 @@ This document outlines the utility scripts available in the repository.
 
 - `run_TotalSegmentator.sh`  
   Executes the TotalSegmentator pipeline for baseline inference on various test sets.
+
+- `get_results.py`  
+  Processes segmentation metrics from multiple models across different datasets, performs statistical comparisons against baseline models, identifies the best-performing scores per region of interest, and outputs the results as a formatted LaTeX table.
+
 
 ## Installation
 
