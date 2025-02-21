@@ -88,6 +88,7 @@ def calc_metrics(subject, gt_dir=None, pred_dir=None, class_map=None):
             r[f"hausdorff-{roi_name}"] = np.NaN
     return r
 
+
 def calculate_confidence_interval(data, confidence=0.95):
     # Ensure data contains only numeric values
     data = [x for x in data if isinstance(x, (int, float))]
@@ -144,12 +145,18 @@ if __name__ == "__main__":
         disable=True,
     )
     res = [r for r in res if r is not None]  # Filter out None results
-    res = pd.DataFrame(res)
+    res_df = pd.DataFrame(res)
+
+    # Save patient-wise metrics
+    res_df.to_csv(pred_dir / "patient_wise_metrics.csv", index=False)
+    logging.info(
+        f"Patient-wise metrics saved to {pred_dir / 'patient_wise_metrics.csv'}"
+    )
 
     results = []
     for metric in ["dice", "hausdorff"]:
         for roi_name in class_map.values():
-            row_wo_nan = res[f"{metric}-{roi_name}"].dropna()
+            row_wo_nan = res_df[f"{metric}-{roi_name}"].dropna()
             mean, lower, upper = calculate_confidence_interval(row_wo_nan)
             results.append(
                 {
