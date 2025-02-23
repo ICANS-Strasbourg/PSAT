@@ -1,5 +1,5 @@
 #!/bin/bash
-# segment_folder.sh
+# run_TotalSegmentator.sh
 #
 # This script loops over all nii.gz files in an input folder,
 # runs TotalSegmentator (generating all classes) with multi-label output,
