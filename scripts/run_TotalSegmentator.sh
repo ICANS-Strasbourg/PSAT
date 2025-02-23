@@ -2,8 +2,8 @@
 # segment_folder.sh
 #
 # This script loops over all nii.gz files in an input folder,
-# runs TotalSegmentator with a restricted ROI subset, and then
-# remaps the resulting multi-label segmentation to a custom label mapping.
+# runs TotalSegmentator (generating all classes) with multi-label output,
+# and then remaps the resulting multi-label segmentation to a custom label mapping.
 #
 # The desired final mapping is:
 #   background:      0
@@ -20,12 +20,6 @@
 #   Bladder:         11
 #   Prostate:        12
 #   Spinal-Canal:    13
-#
-# Note:
-#   The names used with --roi_subset must match the TotalSegmentator classes.
-#   Here we use:
-#       spleen kidney_right kidney_left gallbladder liver stomach pancreas esophagus small_bowel duodenum urinary_bladder prostate spinal_cord
-#   which correspond to the desired labels (with small naming differences).
 #
 # Usage:
 #   ./segment_folder.sh /path/to/input_folder /path/to/output_folder
@@ -56,10 +50,8 @@ process_file() {
     local FILE_TMP_DIR="$TMP_DIR/$base"
     mkdir -p "$FILE_TMP_DIR"
 
-    # Run TotalSegmentator using ROI subset and multi-label output
-    if ! TotalSegmentator -i "$file" -o "$FILE_TMP_DIR" \
-        --roi_subset spleen kidney_right kidney_left gallbladder liver stomach pancreas esophagus small_bowel duodenum urinary_bladder prostate spinal_cord \
-        --ml; then
+    # Run TotalSegmentator generating all classes with multi-label output
+    if ! TotalSegmentator -i "$file" -o "$FILE_TMP_DIR" --ml; then
         echo "TotalSegmentator failed for $file; skipping."
         return
     fi
