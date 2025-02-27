@@ -1,25 +1,16 @@
-# PSAT: **P**ediatric **S**egmentation **A**pproaches via **A**dult **A**ugmentations and **T**ransfer
+# PSAT
 
-### PSAT Notation and Meaning
+This repository contains the code and configuration files for PSAT (Pediatric Segmentation Approaches via Adult Augmentations and Transfer).
 
-**PSAT** stands for **Plan, Set, Augmentation, and Tuning**. Each letter represents a key component of the training configuration for segmentation approaches in pediatric radiotherapy. Below is a breakdown of the notation and its possible options:
+## Overview
 
-| **Component**   | **Symbol**   | **Options and Description**                                                                                   |
-|------------------|--------------|----------------------------------------------------------------------------------------------------------------|
-| **Plan**         | $P$      | - **p**: Pediatric Plans  <br> - **a**: Adult Plans  <br> - **m**: Mixed Plans                                |
-| **Set**          | $S$      | - **p**: Pediatric Dataset  <br> - **a**: Adult Dataset  <br> - **m**: Mixed Dataset                         |
-| **Augmentation** | $A$      | - **d**: Default Augmentations  <br> - **c**: Contraction Augmentations                                      |
-| **Tuning**     | $T$      | - **p**: Pediatric Fine-Tuning  <br> - **m**: Mixed Fine-Tuning  <br> - **None**: No Fine-Tuning |
+PSAT addresses pediatric segmentation challenges by combining:
+- **Training Plans:** Derived from adult, pediatric, or mixed data ($P_a$, $P_p$, $P_m$).
+- **Learning Sets:** Adult-only, pediatric-only, or mixed ($S_a$, $S_p$, $S_m$).
+- **Augmentations:** Default ($A_d$) and contraction-based ($A_c$) strategies.
+- **Transfer Learning:** Direct inference ($T_o$), fine-tuning ($T_p$), or continual learning ($T_m$).
 
----
-
-### Example of PSAT Notation
-
-- $P_a S_a A_d T_p$
-  - **Plan**: Adult Plans  
-  - **Set**: Adult Dataset  
-  - **Augmentation**: Default Augmentations  
-  - **Tuning**: Pediatric Fine-Tuning  
+<img src="resources/images/PSAT_overview.png" alt="PSAT Overview" style="width:80%; max-width:1000px; display:block; margin: 0 auto;">
 
 ## Documentation
 
