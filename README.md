@@ -54,7 +54,6 @@ Replace `<ground_truth_dir>` and `<predictions_dir>` with your folder paths cont
 - [Dataloading](nnUNet/dataloading/dataloading.md)
 - [Preprocessing](nnUNet/preprocessing/preprocessing.md)
 - [Training](nnUNet/training/training.md)
-- [Notebooks](notebooks/notebooks.md)
 - [Resources](resources/resources.md)
 - [Scripts](scripts/scripts.md)
 
