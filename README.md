@@ -1,5 +1,7 @@
 # PSAT
 
+[![Python package](https://github.com/ICANS-Strasbourg/PSAT/actions/workflows/python-package.yml/badge.svg?branch=main)](https://github.com/ICANS-Strasbourg/PSAT/actions/workflows/python-package.yml)
+
 This repository contains the code and configuration files for PSAT (Pediatric Segmentation Approaches via Adult Augmentations and Transfer Learning).
 
 ## Overview
