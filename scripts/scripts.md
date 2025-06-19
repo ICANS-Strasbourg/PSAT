@@ -29,3 +29,12 @@ To evaluate segmentation results using `compute_metrics.py`, you need to install
 ```sh
 $ git clone https://github.com/deepmind/surface-distance.git
 $ pip install surface-distance/
+```
+
+Once installed you can run, for example:
+
+```bash
+python scripts/compute_metrics.py reference_dir prediction_dir
+```
+
+This will produce `patient_wise_metrics.csv` and an aggregated `evaluation_results.csv` in the current directory.
