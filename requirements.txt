@@ -4,3 +4,4 @@ numpy
 matplotlib
 nnunetv2
 scipy
+nibabel

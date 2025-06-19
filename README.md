@@ -21,3 +21,11 @@ PSAT addresses pediatric segmentation challenges by combining:
 - [Notebooks](notebooks/notebooks.md)
 - [Resources](resources/resources.md)
 - [Scripts](scripts/scripts.md)
+
+## Running Tests
+
+Install dependencies listed in `requirements.txt` and run:
+
+```bash
+pytest -q
+```
