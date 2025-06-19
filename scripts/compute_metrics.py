@@ -7,6 +7,25 @@ Key enhancements include:
   and Hausdorff distances (https://github.com/deepmind/surface-distance).
 - Dynamic retrieval of pixel spacing to support varying image resolutions.
 - Reorientation checks to ensure proper alignment and spacing of NIfTI images.
+
+Usage:
+    python scripts/compute_metrics.py <ground_truth_dir> <predictions_dir>
+
+Arguments:
+    ground_truth_dir: Directory containing ground truth NIfTI files (*.nii.gz)
+    predictions_dir: Directory containing predicted NIfTI files (*.nii.gz)
+
+Expected file format:
+    - Each subject should have a file named <subject>.nii.gz in both directories.
+    - Files must be 3D or 4D NIfTI images with integer labels.
+
+Dependencies:
+    - nibabel
+    - numpy
+    - pandas
+    - p_tqdm
+    - scipy
+    - surface-distance
 """
 
 import sys
@@ -34,6 +53,11 @@ logging.basicConfig(
 def dice_score(y_true, y_pred):
     """
     Binary Dice score. Same results as sklearn f1 binary.
+    Args:
+        y_true (np.ndarray): Binary ground truth mask.
+        y_pred (np.ndarray): Binary predicted mask.
+    Returns:
+        float: Dice coefficient.
     """
     intersect = np.sum(y_true * y_pred)
     denominator = np.sum(y_true) + np.sum(y_pred)
@@ -42,11 +66,12 @@ def dice_score(y_true, y_pred):
 
 
 def reorient_to_ras(img):
-    """Reorient the image to RAS (Right-Anterior-Superior) orientation."""
+    """Reorient the image to RAS (Right-Anterior-Superior) orientation using nibabel."""
     return nib.as_closest_canonical(img)
 
 
 def calc_metrics(subject, gt_dir=None, pred_dir=None, class_map=None):
+    # Load ground truth and prediction images for a subject
     try:
         gt_img = nib.load(gt_dir / f"{subject}.nii.gz")
         pred_img = nib.load(pred_dir / f"{subject}.nii.gz")
@@ -70,6 +95,7 @@ def calc_metrics(subject, gt_dir=None, pred_dir=None, class_map=None):
         gt = gt_all == idx
         pred = pred_all == idx
 
+        # Handle cases where ground truth or prediction is missing for a class
         if gt.max() > 0 and pred.max() == 0:
             r[f"dice-{roi_name}"] = 0
             r[f"hausdorff-{roi_name}"] = 0
@@ -103,9 +129,12 @@ if __name__ == "__main__":
     """
     Calculate Dice score and Hausdorff distance for your nnU-Net predictions.
 
-    example usage:
-    python evaluate.py ground_truth_dir predictions_dir
+    Example usage:
+        python scripts/compute_metrics.py <ground_truth_dir> <predictions_dir>
+
+    See the top-level docstring for more details.
     """
+    # Parse input arguments
     gt_dir = Path(sys.argv[1])
     pred_dir = Path(sys.argv[2])
 
