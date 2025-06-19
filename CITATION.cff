@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite our paper as below."
+title: "PSAT: Pediatric Segmentation Approaches via Adult Augmentations and Transfer Learning"
+authors:
+  - family-names: Kirscher
+    given-names: Tristan
+  - orcid: https://orcid.org/0009-0004-6646-6548
+version: "0.5.0"
+year: 2025
+journal: "MICCAI"
+license: MIT
+url: "https://github.com/ICANS-Strasbourg/PSAT"
+id: "arXiv:xxxx.xxxxx" 
