@@ -1,8 +1,17 @@
-# PSAT
 
-[![Python package](https://github.com/ICANS-Strasbourg/PSAT/actions/workflows/python-package.yml/badge.svg?branch=main)](https://github.com/ICANS-Strasbourg/PSAT/actions/workflows/python-package.yml)
+<p align="center">
+  <img src="resources/images/psat_logo.png" alt="PSAT Logo" style="width:50%; max-width:100px; display:block; margin: 0 auto;">
+</p>
 
-Pediatric Segmentation Approaches via Adult Augmentations and Transfer Learning
+<p align="center">
+  <strong>P</strong>ediatric <strong>S</strong>egmentation <strong>A</strong>pproaches via <strong>A</strong>dult <strong>A</strong>ugmentations and <strong>T</strong>ransfer Learning
+</p>
+
+<p align="center">
+  <a href="https://github.com/ICANS-Strasbourg/PSAT/actions/workflows/python-package.yml">
+    <img src="https://github.com/ICANS-Strasbourg/PSAT/actions/workflows/python-package.yml/badge.svg?branch=main" alt="Python package">
+  </a>
+</p>
 
 ---
 
@@ -25,7 +34,9 @@ Pediatric Segmentation Approaches via Adult Augmentations and Transfer Learning
 
 **PSAT** addresses pediatric segmentation challenges by leveraging adult, pediatric, and mixed datasets, advanced augmentation strategies, and transfer learning. It is designed for researchers and practitioners working on medical image segmentation, especially in pediatric contexts.
 
-<img src="resources/images/PSAT_overview.png" alt="PSAT Overview" style="width:80%; max-width:1000px; display:block; margin: 0 auto;">
+<p align="center">
+  <img src="resources/images/PSAT_overview.png" alt="PSAT Overview" style="width:80%; max-width:1000px; display:block; margin: 0 auto;">
+</p>
 
 ## Features
 - **Flexible Training Plans:** Use adult, pediatric, or mixed data ($P_a$, $P_p$, $P_m$)
