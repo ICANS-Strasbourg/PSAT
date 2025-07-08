@@ -1,13 +1,30 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite our paper as below."
 title: "PSAT: Pediatric Segmentation Approaches via Adult Augmentations and Transfer Learning"
+version: "0.5.0"
 authors:
   - family-names: Kirscher
     given-names: Tristan
-  - orcid: https://orcid.org/0009-0004-6646-6548
-version: "0.5.0"
-year: 2025
-journal: "MICCAI"
+    orcid: https://orcid.org/0009-0004-6646-6548
+  - family-names: Faisan
+    given-names: Sylvain
+  - family-names: Coubez
+    given-names: Xavier
+  - family-names: Barrier
+    given-names: Loris
+  - family-names: Meyer
+    given-names: Philippe
+date-published: "2025-09"
+conference:
+  name: "28th International Conference on Medical Image Computing and Computer Assisted Intervention"
+  location: "Daejeon, South Korea"
+  year: 2025
+keywords:
+  - Pediatric Segmentation
+  - Age Bias
+  - Domain Adaptation
+  - Transfer Learning
+url: "https://hal.science/hal-05137403"
+repository-code: "https://github.com/ICANS-Strasbourg/PSAT"
 license: MIT
-url: "https://github.com/ICANS-Strasbourg/PSAT"
-id: "arXiv:xxxx.xxxxx" 
+id: "kirscher:hal-05137403"
