@@ -50,12 +50,18 @@
 If you use this code, please cite our paper:
 
 ```
-@article{kirscher2025psat,
-  title={PSAT: Pediatric Segmentation Approaches via Adult Augmentations and Transfer Learning},
-  author={T. Kirscher et al},
-  journal={MICCAI},
-  year={2025},
-  note={arXiv:xxxx.xxxxx}
+@inproceedings{kirscher:hal-05137403,
+  TITLE = {{PSAT: Pediatric Segmentation Approaches via Adult Augmentations and Transfer Learning}},
+  AUTHOR = {Kirscher, Tristan and Faisan, Sylvain and Coubez, Xavier and Barrier, Loris and Meyer, Philippe},
+  URL = {https://hal.science/hal-05137403},
+  BOOKTITLE = {{28th INTERNATIONAL CONFERENCE ON MEDICAL IMAGE COMPUTING AND COMPUTER ASSISTED INTERVENTION}},
+  ADDRESS = {Daejon, South Korea},
+  YEAR = {2025},
+  MONTH = Sep,
+  KEYWORDS = {Pediatric Segmentation Age Bias Domain Adaptation Transfer Learning ; Pediatric Segmentation ; Age Bias ; Domain Adaptation ; Transfer Learning},
+  PDF = {https://hal.science/hal-05137403v1/file/main.pdf},
+  HAL_ID = {hal-05137403},
+  HAL_VERSION = {v1},
 }
 ```
 
